@@ -1,0 +1,21 @@
+package com.greatlearning.foreigncurrency;
+
+import java.util.Scanner;
+
+public class StoreCurrency {
+
+	public int currencyDenominations[];
+	Scanner sc = new Scanner(System.in);
+
+	public void createcurrencyDenominationsArray(int size) {
+		currencyDenominations = new int[size];
+	}
+
+	public void inputInArray() {
+
+		for (int i = 0; i < currencyDenominations.length; i++) {
+			currencyDenominations[i] = sc.nextInt();
+		}
+	}
+
+}

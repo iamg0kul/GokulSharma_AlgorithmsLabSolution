@@ -1,0 +1,22 @@
+package com.greatlearning.foreigncurrency;
+
+public class MinimumCurrencyGenerator {
+	
+	int leftPayAmount;
+	public void minimunCurrencyGenerator(int[] currencyDenominationsArray,int payAmount) {
+		leftPayAmount=payAmount;
+		for (int element: currencyDenominationsArray) {
+            System.out.println(element);
+        }
+		for(int i=currencyDenominationsArray.length-1;i<=0;i--) {
+			
+			if(leftPayAmount/currencyDenominationsArray[i]>=1)
+			{
+				int times=(int)leftPayAmount/currencyDenominationsArray[i];
+				System.out.println(currencyDenominationsArray[i]+": "+times);
+				leftPayAmount=leftPayAmount-currencyDenominationsArray[i]*times;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.greatlearning.transactions;
+
+public class TransctionArrayInput {
+	
+	Transaction
+	int transactionsArray[];
+	
+
+}

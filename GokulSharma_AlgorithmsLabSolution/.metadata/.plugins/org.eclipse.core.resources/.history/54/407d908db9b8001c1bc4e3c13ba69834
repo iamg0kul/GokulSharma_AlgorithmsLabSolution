@@ -1,0 +1,11 @@
+package com.greatlearning.entrypoint;
+
+public class test {
+
+	public static void main(String[] args) {
+		int a=(int) 10.7;
+		System.out.println(a);
+
+	}
+
+}

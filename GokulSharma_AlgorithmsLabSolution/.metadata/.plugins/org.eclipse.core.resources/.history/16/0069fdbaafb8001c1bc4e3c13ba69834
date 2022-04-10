@@ -1,0 +1,18 @@
+package com.greatlearning.transactions;
+
+public class TargetCheck {
+
+	int targetValue,arraySum=0;
+	
+	public int taregtCheck(int targetValue, int[] transactionArray) {
+		
+		this.targetValue=targetValue;
+		for(int i=0;i<transactionArray.length;i++) {
+			arraySum=arraySum+transactionArray[i];
+			if(targetValue<=arraySum)
+				return i+1;
+		}
+		return -1;
+	}
+
+}

@@ -1,0 +1,41 @@
+package com.greatlearning.foreigncurrency;
+
+import java.util.Scanner;
+
+public class StoreCurrency {
+
+	public int currencyDenominationsArray[];
+	Scanner sc = new Scanner(System.in);
+
+	public void createCurrencyDenominationsArray(int size) {
+		currencyDenominationsArray = new int[size];
+	}
+
+	public void inputInCurrencyDenominationsArray() {
+
+		for (int i = 0; i < currencyDenominationsArray.length; i++) {
+			int value=sc.nextInt();
+			while(value<1) {
+				System.out.println("Currency cannot be "+value+" re-enter correct value.");
+				value=sc.nextInt();
+			}
+			currencyDenominationsArray[i] = value;
+		}
+	}
+	
+	public void sortCurrencyDenominationsArray() {
+		
+		int n=currencyDenominationsArray.length;
+		for (int i = 0; i < n-1; i++)
+        {
+            int minIndex = i;
+            for (int j = i+1; j < n; j++)
+                if (currencyDenominationsArray[j] < currencyDenominationsArray[minIndex])
+                    minIndex = j;
+            int temp = currencyDenominationsArray[minIndex];
+            currencyDenominationsArray[minIndex] = currencyDenominationsArray[i];
+            currencyDenominationsArray[i] = temp;
+        }
+	}
+
+}

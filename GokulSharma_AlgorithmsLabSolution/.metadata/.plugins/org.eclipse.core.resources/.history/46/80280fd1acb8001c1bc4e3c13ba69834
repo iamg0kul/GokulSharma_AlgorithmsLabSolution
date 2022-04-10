@@ -1,0 +1,17 @@
+package com.greatlearning.transactions;
+import java.util.Scanner;
+
+public class TransactionsArray {
+	
+	int transactionArray[];
+	Scanner sc=new Scanner(System.in);
+	
+	void inputInArray(int size) {
+		
+		transactionArray=new int[size];
+		for(int i=0;i<transactionArray.length;i++) {
+			transactionArray[i]=sc.nextInt();
+		}
+	}
+
+}

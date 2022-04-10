@@ -1,0 +1,9 @@
+package com.greatlearning.foreigncurrency;
+
+public class MinimumCurrencyGenerator {
+	
+	public void minimunCurrencyGenerator(int[] currencyDenominationsArray,int payAmount) {
+		
+	}
+
+}
